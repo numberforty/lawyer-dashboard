@@ -33,7 +33,7 @@ A simple MERN stack demonstration for managing legal cases.
    ```bash
    npm run dev --prefix web
    ```
-  Visit `http://localhost:5173` in your browser.
+6. Visit `http://localhost:5173` in your browser.
 
 ## Testing
 There are no automated tests yet, so the `npm test` command simply outputs a placeholder message.
