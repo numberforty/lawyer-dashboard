@@ -1,15 +1,40 @@
 # Lawyer Dashboard
 
-This project is a MERN (MongoDB, Express, React and Node.js) dashboard for managing legal cases and client interactions. The server uses Node.js with Express and MongoDB, while the client runs on React.
+A simple MERN stack demonstration for managing legal cases.
 
-Development is at an early stage and additional instructions will be added as the project grows.
+## Requirements
+- Node.js >=20
+- MongoDB instance (Docker compose is provided)
 
-## Getting Started on Windows
+## Setup
+1. Create a `.env` file inside the `api` folder using `.env.example` as a template:
+   ```ini
+   MONGO_URI=mongodb://localhost:27017/lawyer
+   JWT_SECRET=changeme
+   ```
+2. Install dependencies:
+   ```bash
+   npm install --prefix api
+   npm install --prefix web
+   ```
+3. Start MongoDB (using Docker):
+   ```bash
+   docker-compose up -d
+   ```
+4. Seed a demo account and start the API server:
+   ```bash
+   npm run seed --prefix api
+   npm run dev --prefix api
+   ```
+   The seeded credentials are:
+   - **Email:** `demo@example.com`
+   - **Password:** `password123`
+5. Start the React client:
+   ```bash
+   npm run dev --prefix web
+   ```
+   Visit `http://localhost:5173` in your browser.
 
-```bash
-docker-compose up -d
-npm install --prefix api
-npm install --prefix web
-npm run dev --prefix api
-npm run dev --prefix web
-```
+## Project Structure
+- `api/` – Express + MongoDB backend
+- `web/` – React frontend built with Vite and Tailwind CSS
