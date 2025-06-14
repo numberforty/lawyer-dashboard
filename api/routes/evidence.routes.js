@@ -20,7 +20,8 @@ router.post('/:caseId', upload.single('file'), async (req, res) => {
       filename: req.file.filename,
       originalname: req.file.originalname,
       mimetype: req.file.mimetype,
-      path: req.file.path
+      path: req.file.path,
+      size: req.file.size
     });
     res.json(ev);
   } catch (err) {

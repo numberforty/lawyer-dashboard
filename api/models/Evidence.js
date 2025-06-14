@@ -5,7 +5,8 @@ const evidenceSchema = new mongoose.Schema({
   filename: { type: String, required: true },
   originalname: { type: String },
   mimetype: { type: String },
-  path: { type: String }
+  path: { type: String },
+  size: { type: Number }
 }, { timestamps: true });
 
 export default mongoose.model('Evidence', evidenceSchema);
