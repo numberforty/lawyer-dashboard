@@ -7,8 +7,12 @@
   "scripts": {
     "dev": "nodemon server.js",
     "start": "node server.js",
+
     "seed": "node seed.js",
     "test": "echo \"No tests specified\""
+
+    "seed": "node seed.js"
+
   },
   "engines": {
     "node": ">=20"
